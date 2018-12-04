@@ -1,0 +1,127 @@
+@import "fonts.css";
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    margin: 0;
+}
+
+header {
+    background: #384880;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 125px;
+}
+
+header h1 {
+    padding: 25px;
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: #DEE6ED;
+}
+
+button {
+    background-color: #bed1f4;
+    margin: 35px;
+    padding: 10px 25px;
+    height: 60px;
+    outline: none;
+    border: 1px solid #0005FF;
+    border-radius: 30px;
+    font-family: 'Asap', sans-serif;
+    font-size: 25px;
+    color: #000557;
+}
+
+.container-1 {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.container-2 {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.container-2 h1 {
+    margin: 30px;
+}
+
+aside {
+    background: #c8cbc3;
+    flex: 0 0 80px;
+}
+
+a:hover {
+    position: relative;
+}
+
+a:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc( -150% + 10px);
+    left: calc( 105% + -5px);
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-color: transparent #384880 transparent transparent;
+    width: 0;
+    height: 0;
+    margin: 0 0 0 -10px;
+    font-family: 'Asap', sans-serif;
+}
+
+a:hover::after {
+    content: attr(data-display-name);
+    color: #eee;
+    position: absolute;
+    top: -150%;
+    left: calc( 105% + 5px);
+    display: block;
+    text-decoration: none;
+    background: #384880;
+    padding: 5px 7px;
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.5rem;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    padding: 10px 20px;
+}
+
+
+p {
+    flex: 1 1 auto;
+    margin: 30px;
+    font-family: 'Asap', sans-serif;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+.content{
+    display: none;
+}
+.content:target{
+    display: block;
+}
+
+.content:target ~ .content:last-child {
+    display: none;
+}
+
+.content:last-child {
+    display: block;
+}
+
