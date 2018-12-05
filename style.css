@@ -67,8 +67,8 @@ a:hover::before {
     content: "";
     display: block;
     position: absolute;
-    top: calc( -150% + 10px);
-    left: calc( 105% + -5px);
+    top: calc(-150% + 10px);
+    left: calc(105% + -5px);
     border-style: solid;
     border-width: 10px 10px 10px 10px;
     border-color: transparent #384880 transparent transparent;
@@ -83,7 +83,7 @@ a:hover::after {
     color: #eee;
     position: absolute;
     top: -150%;
-    left: calc( 105% + 5px);
+    left: calc(105% + 5px);
     display: block;
     text-decoration: none;
     background: #384880;
@@ -98,9 +98,12 @@ a:hover::after {
 img {
     width: 40px;
     height: 40px;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
+img:hover {
+    background: #F1F4EC;
+}
 
 p {
     flex: 1 1 auto;
@@ -110,10 +113,11 @@ p {
     text-align: justify;
 }
 
-.content{
+.content {
     display: none;
 }
-.content:target{
+
+.content:target {
     display: block;
 }
 
